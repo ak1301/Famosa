@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -30,18 +30,20 @@
                         <th>ACCIONES</th>
                         </thead>
                         <tbody>
-                        <c:forEach var="dato" items="$(listar)"> 
+                            <c:forEach var="dato" items="${datos}" > 
                             <tr>
-                                <td>$(dato.Id)</td>
-                                <td>$(dato.Nombre)</td>
-                                <td>$(dato.Apellido)</td>
-                                <td>$(dato.Documento)</td>
-                                <td>$(dato.Telefono)</td>
-                                <td>$(dato.Celular)</td>
-                                <td>$(dato.Ciudad)</td>
-                                <td>$(dato.Direccion)</td>
-                                <td><a class="btn btn-warning">Editar</a>
-                                    <a class="btn btn-danger">Eliminar</a></td>
+                                <td>${dato.id_cliente}</td>
+                                <td>${dato.nombres}</td>
+                                <td>${dato.apellidos}</td>
+                                <td>${dato.documento}</td>
+                                <td>${dato.telefono}</td>
+                                <td>${dato.celular}</td>
+                                <td>${dato.ciudad}</td>
+                                <td>${dato.direccion}</td>
+                                <td>
+                                    <a class="btn btn-warning">Editar</a>
+                                    <a class="btn btn-danger">Eliminar</a>
+                                </td>
                             </tr>
                         </c:forEach>
                         </tbody>
