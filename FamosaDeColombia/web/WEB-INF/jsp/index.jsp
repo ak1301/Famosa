@@ -40,7 +40,8 @@
                                 <td>${dato.celular}</td>
                                 <td>${dato.ciudad}</td>
                                 <td>${dato.direccion}</td>
-                                <td><a class="btn btn-warning">Editar</a>
+                                <td>
+                                    <a class="btn btn-warning">Editar</a>
                                     <a class="btn btn-danger">Eliminar</a>
                                 </td>
                             </tr>
